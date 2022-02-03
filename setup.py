@@ -1,8 +1,13 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.1'
+with open('README.md') as f:
+    README = f.read()
+
+with open('LICENSE') as f:
+    LICENSE = f.read()
+
+VERSION = '0.0.3'
 DESCRIPTION = 'MAKA Python for online script monitoring and control.'
-LONG_DESCRIPTION = 'MAKA Python for online script monitoring and control.'
 
 setup(
     name="maka",
@@ -10,9 +15,11 @@ setup(
     author="James Runnalls",
     author_email="<runnalls.james@gmail.com>",
     description=DESCRIPTION,
-    long_description=LONG_DESCRIPTION,
+    long_description=README,
+    long_description_content_type='text/markdown',
     packages=find_packages(),
+    url='https://github.com/JamesRunnalls/river-trace',
+    license=LICENSE,
     install_requires=[],
-    license="MIT",
     keywords=['python', 'MAKA', 'monitoring', 'monitor'],
 )
