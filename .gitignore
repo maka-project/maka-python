@@ -2,3 +2,5 @@ build
 dist
 maka.egg-info
 .idea
+tests/log
+maka/__pycache__

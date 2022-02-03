@@ -11,8 +11,12 @@ class monitor(object):
         if not os.path.exists(log_path):
             os.makedirs(log_path)
         with open(self.path, "w") as file:
-            file.write("Initializing Logging File at {} \n".format(self.init))
-            file.write("............................................. \n".format(self.init))
+            out = "Initializing Logging File at {}".format(self.init)
+            file.write(out+"\n")
+            print(out)
+            out = "............................................."
+            file.write(out+"\n")
+            print(out)
 
     def log(self, text, indent=0):
         out = datetime.now().strftime("%H:%M:%S.%f") + (" " * 3 * (indent + 1)) + text
@@ -24,4 +28,4 @@ class monitor(object):
         out = datetime.now().strftime("%H:%M:%S.%f") + (" " * 3 * (indent + 1)) + "ERROR: " + text
         with open(self.path, "a") as file:
             file.write(out + "\n")
-        print(out)
+        print("\033[31m"+out)
