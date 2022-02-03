@@ -6,7 +6,7 @@ with open('README.md') as f:
 with open('LICENSE') as f:
     LICENSE = f.read()
 
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 DESCRIPTION = 'MAKA Python for online script monitoring and control.'
 
 setup(
@@ -18,7 +18,7 @@ setup(
     long_description=README,
     long_description_content_type='text/markdown',
     packages=find_packages(),
-    url='https://github.com/JamesRunnalls/river-trace',
+    url='https://github.com/maka-project/maka-python',
     license=LICENSE,
     install_requires=[],
     keywords=['python', 'MAKA', 'monitoring', 'monitor'],
